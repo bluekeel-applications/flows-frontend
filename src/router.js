@@ -9,7 +9,7 @@ import Suv from './components/verticals/auto_loans/auto_type/Suv';
 import Truck from './components/verticals/auto_loans/auto_type/Truck';
 import Van from './components/verticals/auto_loans/auto_type/Van';
 // Credit Card Components
-import CreditCardsContainer from "./components/verticals/credit_cards/CreditCardsContainer";
+import CreditCardsContainer from "./components/verticals/credit_cards/CCContainer";
 // Home Loan Components
 import HomeLoansContainer from "./components/verticals/home_loans/HomeLoansContainer";
 import Heloc from './components/verticals/home_loans/home_loan_type/Heloc';

@@ -1,9 +1,10 @@
 import React from 'react';
+import CCTypeController from './CCTypeController';
 
 function CreditCardsContainer() {
     return (
         <div className="credit-cards-page">
-            Credit Cards Flow
+            <CCTypeController />
         </div>
     );
 }
