@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeLoanTypeController from './HomeLoanTypeController';
 
-function HomeLoansContainer() {
+const HomeLoansContainer = () => {
     return (
         <div className="home-loans-page">
             <HomeLoanTypeController />

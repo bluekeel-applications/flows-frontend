@@ -1,7 +1,7 @@
 import React from 'react';
 import { A } from 'hookrouter';
 
-function HomeLoanTypeController() {
+const HomeLoanTypeController = () => {
     return (
         <div className="auto-type">
             Select Loan Type:

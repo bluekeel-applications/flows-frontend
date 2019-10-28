@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { withStore } from '../../../../store';
 
-function Lease() {
-    return (
-        <div className="homeloan-type-selected">
-            Home Loan for Lease to Own
-        </div>
-    );
+class Lease extends Component {
+    componentDidMount = () => {
+        this.props.store.set('vertical', 'home_loan');
+        this.props.store.set('loan_type', 'lease_to_own');
+    }
+
+    render() {
+        return (
+            <div className="homeloan-type-selected">
+                <div>Vertical:<p>{this.props.store.vertical}</p></div>
+                <div>Loan Type:<p>{this.props.store.loan_type}</p></div>
+            </div>
+        );
+    }
 }
 
-export default Lease;
+export default withStore(Lease);
