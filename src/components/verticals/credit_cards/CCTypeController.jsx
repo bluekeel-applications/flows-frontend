@@ -29,7 +29,7 @@ class CCTypeController extends Component {
     cardChoiceButton = (typeName, i) => {
         return (
             <li key={i}>
-                <A href="/credit_cards/checking_optin" onClick={this.onTypeClick}>{typeName}</A>
+                <A href="/checking_optin" onClick={this.onTypeClick}>{typeName}</A>
             </li>
         )
     }

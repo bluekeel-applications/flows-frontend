@@ -1,13 +1,14 @@
 import React from 'react';
-import Home from './components/Home';
-import StartFlow from './components/GetStarted';
+// Container Components
+import Home from './components/containers/Home';
+import StartFlow from './components/containers/GetStarted';
+import OfferFeed from "./components/containers/OfferFeed";
+// Optin Components
+import CheckingOptin from './components/optins/Checking';
+import EmailOptin from './components/optins/Email';
+import DebtOptin from './components/optins/Debt';
 // Auto Loan Components
 import AutoLoansContainer from "./components/verticals/auto_loans/AutoLoansContainer";
-import Car from './components/verticals/auto_loans/auto_type/Car';
-import Other from './components/verticals/auto_loans/auto_type/Other';
-import Suv from './components/verticals/auto_loans/auto_type/Suv';
-import Truck from './components/verticals/auto_loans/auto_type/Truck';
-import Van from './components/verticals/auto_loans/auto_type/Van';
 // Credit Card Components
 import CreditCardsContainer from "./components/verticals/credit_cards/CCContainer";
 // Home Loan Components
@@ -22,27 +23,23 @@ import PersonalLoans from "./components/verticals/personal_loans/PersonalLoansCo
 const routes = {
     "/": () => <Home />,
     "/get_started": () => <StartFlow />,
+    "/offer_feed": () => <OfferFeed />,
+// Optin Routes
+    "/email_optin": () => <EmailOptin />,
+    "/checking_optin": () => <CheckingOptin />,
+    "/debt_optin": () => <DebtOptin />,
 // Auto Loan Flow Routes
     "/auto_loans": () => <AutoLoansContainer />,
-    "/auto_loans/car": () => <Car />,
-    "/auto_loans/other": () => <Other />,
-    "/auto_loans/suv": () => <Suv />,
-    "/auto_loans/truck": () => <Truck />,
-    "/auto_loans/van": () => <Van />,
-
 // Credit Card Flow Routes
     "/credit_cards": () => <CreditCardsContainer />,
-
 // Home Loan Flow Routes
     "/home_loans": () => <HomeLoansContainer />,
     "/home_loans/heloc": () => <Heloc />,
     "/home_loans/lease": () => <Lease />,
     "/home_loans/purchase": () => <Purchase />,
     "/home_loans/refinance": () => <Refinance />,
-
 // Personal Loan Flow Routes
     "/personal_loans": () => <PersonalLoans />
-
 };
 
 export default routes;
