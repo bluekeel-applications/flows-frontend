@@ -13,10 +13,6 @@ import AutoLoansContainer from "./components/verticals/auto_loans/AutoLoansConta
 import CreditCardsContainer from "./components/verticals/credit_cards/CCContainer";
 // Home Loan Components
 import HomeLoansContainer from "./components/verticals/home_loans/HomeLoansContainer";
-import Heloc from './components/verticals/home_loans/home_loan_type/Heloc';
-import Lease from './components/verticals/home_loans/home_loan_type/Lease';
-import Purchase from './components/verticals/home_loans/home_loan_type/Purchase';
-import Refinance from './components/verticals/home_loans/home_loan_type/Refinance';
 // Perstonal Loan Components
 import PersonalLoans from "./components/verticals/personal_loans/PersonalLoansContainer";
 
@@ -34,10 +30,6 @@ const routes = {
     "/credit_cards": () => <CreditCardsContainer />,
 // Home Loan Flow Routes
     "/home_loans": () => <HomeLoansContainer />,
-    "/home_loans/heloc": () => <Heloc />,
-    "/home_loans/lease": () => <Lease />,
-    "/home_loans/purchase": () => <Purchase />,
-    "/home_loans/refinance": () => <Refinance />,
 // Personal Loan Flow Routes
     "/personal_loans": () => <PersonalLoans />
 };
