@@ -1,10 +1,14 @@
 import React from 'react';
-import { A } from 'hookrouter';
+import ButtonLink from '../shared/ButtonLink';
 
 function Home() {
     return (
-        <div className="home-page">
-            <A href="/get_started">Get Started</A>
+        <div className='home-page'>
+            <ButtonLink 
+                href='/get_started'
+                updateOnClick={false}
+                text='Get Started'
+            />            
         </div>
     );
 }

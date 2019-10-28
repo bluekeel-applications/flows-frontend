@@ -5,27 +5,30 @@ class OfferFeed extends Component {
     CURRENT_USER = [
         {vertical: this.props.store.get('vertical') || 'Unknown'},
         {type: this.props.store.get('loan_type') || 'Unknown'},
+        {debt_type: this.props.store.get('debt_type') || 'Unknown'},
         {checking: this.props.store.get('checking') || 'Unknown'},
+        {debt: this.props.store.get('debt') || 'Unknown'},
+        {email: this.props.store.get('email') || 'Unknown'},
     ]
 
     render() {
         return (
             <div className='offers-feed-container'>
-                Offers/Feed 
-                <ul>
+                <h1>Offers/Feed</h1> 
+                <div>
                     {this.CURRENT_USER.map((data_point, i) => {
                         let keyValue = Object.keys(data_point)[0];
                         let value = data_point[keyValue];
                         return (value === 'Unknown' ? "":
                             (
-                                <li key={i}>
-                                    <h4>{keyValue}:</h4>
-                                    <p>{value}</p>
-                                </li>
+                                <div key={i}>
+                                    <h3><u>{keyValue}:</u></h3>
+                                    <h2>{value}</h2>
+                                </div>
                             )
                         )
                     })}
-                </ul>
+                </div>
             </div>
         )
     }

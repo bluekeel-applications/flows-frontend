@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { A } from 'hookrouter';
 import { withStore } from '../../../store';
+import ButtonLink from '../../shared/ButtonLink';
 
 const AUTO_TYPES = [
     'Car',
@@ -16,29 +16,27 @@ class AutoTypeController extends Component {
         this.props.store.set('vertical', 'auto_loans');
     }
 
-    setTypeOnClick = (e) => {
-        const auto_type_raw = e.target.innerHTML.toLowerCase();
-        const cleanValue = auto_type_raw.split(' ').join('_').split('/').join('_');
-        this.props.store.set('loan_type', cleanValue);
-    }
-
     cardChoiceButton = (typeName, i) => {
-        return (
-            <li key={i}>
-                <A href="/offer_feed" onClick={this.setTypeOnClick}>{typeName}</A>
-            </li>
+        return (          
+            <ButtonLink 
+                href="/offer_feed"
+                updateOnClick={true}
+                text={typeName}
+                storeValue='loan_type'
+                key={i}
+            />                        
         )
     }
 
     render() {
         return (
             <div className="auto-type">
-                Select Automobile Type:
-                <ul>
+                <h2>Select Car Type:</h2>
+                <div>
                     {AUTO_TYPES.map((card_type, i) => {
                         return this.cardChoiceButton(card_type, i)
-                    })}
-                </ul>
+                    })}                
+                </div>
             </div>
         );
     }

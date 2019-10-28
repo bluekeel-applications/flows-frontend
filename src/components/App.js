@@ -1,7 +1,9 @@
 import React from 'react';
 import { createStore } from '../store';
-import { useRoutes, A } from 'hookrouter';
+import { useRoutes } from 'hookrouter';
 import routes from '../router'
+
+import ButtonLink from './shared/ButtonLink';
 
 
 const App = () => {
@@ -12,12 +14,12 @@ const App = () => {
     <div className="App">
       {
         isStart ? "" : 
-        <div>
-          <ul className="nav-links">
-            <li>
-              <A href="/">Start Over</A>
-            </li>
-          </ul>
+        <div className='start-over-button'>
+          <ButtonLink 
+            href='/'
+            updateOnClick={false}
+            text='Start Over'
+          />
         </div>
       }
       {routeResult}

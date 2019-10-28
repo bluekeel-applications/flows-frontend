@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { A } from 'hookrouter';
+import ButtonLink from '../../shared/ButtonLink';
 import { withStore } from '../../../store';
 
 class CheckingOptin extends Component {
@@ -7,6 +7,18 @@ class CheckingOptin extends Component {
     updateOnClick = (e) => {
         const optin_answer = e.target.innerHTML.toLowerCase();
         this.props.store.set('checking', optin_answer);
+    }
+
+    setHref = () => {
+        let currentFlow = this.props.store.get('vertical');
+        switch (currentFlow) {
+            case 'credit_cards':
+                return '/offer_feed';                
+            case 'personal_loans':
+                return '/email_optin';                
+            default:
+                return '/offer_feed';
+        }
     }
 
     render() {
@@ -20,15 +32,19 @@ class CheckingOptin extends Component {
                     Would you like to see free checking account options?
                 </h3>
             </div>
-            <div className='answer-container'>
-                <ul>
-                    <li>
-                        <A href="/offer_feed" onClick={this.updateOnClick}>Yes</A>
-                    </li>
-                    <li>
-                            <A href="/offer_feed" onClick={this.updateOnClick}>No</A>
-                    </li>
-                </ul>
+            <div className='answer-container'>                
+                <ButtonLink 
+                    href={this.setHref()}
+                    updateOnClick={true}
+                    storeValue='checking'
+                    text='Yes'
+                />            
+                <ButtonLink
+                    href={this.setHref()}
+                    updateOnClick={true}
+                    storeValue='checking'
+                    text='No'
+                />
             </div>
         </div>
         )
