@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CreditCards() {
+function CreditCardsContainer() {
     return (
         <div className="credit-cards-page">
             Credit Cards Flow
@@ -8,4 +8,4 @@ function CreditCards() {
     );
 }
 
-export default CreditCards;
+export default CreditCardsContainer;

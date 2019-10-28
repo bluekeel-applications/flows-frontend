@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PersonalLoans() {
+function PersonalLoansContainer() {
     return (
         <div className="personal-loans-page">
             Personal Loans Flow
@@ -8,4 +8,4 @@ function PersonalLoans() {
     );
 }
 
-export default PersonalLoans;
+export default PersonalLoansContainer;

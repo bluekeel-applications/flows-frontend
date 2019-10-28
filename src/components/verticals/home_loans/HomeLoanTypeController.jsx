@@ -1,7 +1,7 @@
 import React from 'react';
 import { A } from 'hookrouter';
 
-function HomeLoanType() {
+function HomeLoanTypeController() {
     return (
         <div className="auto-type">
             Select Loan Type:
@@ -23,4 +23,4 @@ function HomeLoanType() {
     );
 }
 
-export default HomeLoanType;
+export default HomeLoanTypeController;

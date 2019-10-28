@@ -1,7 +1,7 @@
 import React from 'react';
 import { A } from 'hookrouter';
 
-function AutoType() {
+function AutoTypeController() {
     return (
         <div className="auto-type">
             Select Car Type
@@ -26,4 +26,4 @@ function AutoType() {
     );
 }
 
-export default AutoType;
+export default AutoTypeController;
