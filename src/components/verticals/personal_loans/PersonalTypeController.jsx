@@ -14,16 +14,34 @@ class PersonalTypeController extends Component {
                 <h2>Select Loan Type:</h2>
                 <div className='answer-container'>                    
                     <ButtonLink 
-                        href='personal/debt_consolidation'
+                        href='/debt_consolidation'
                         updateOnClick={true}
                         storeValue='loan_type'
                         text='Debt Consolidation'
                     />                                            
                     <ButtonLink
-                        href='email_optin'
+                        href='/email_optin'
                         updateOnClick={true}
                         storeValue='loan_type'
                         text='Pay Taxes'
+                    />                                             
+                    <ButtonLink
+                        href='/debt_optin'
+                        updateOnClick={true}
+                        storeValue='loan_type'
+                        text='Make a Purchase'
+                    />                                             
+                    <ButtonLink
+                        href='/debt_optin'
+                        updateOnClick={true}
+                        storeValue='loan_type'
+                        text='Emergency Cash'
+                    />                                             
+                    <ButtonLink
+                        href='/debt_optin'
+                        updateOnClick={true}
+                        storeValue='loan_type'
+                        text='Pay Bills'
                     />                                             
                     <ButtonLink
                         href='/debt_optin'

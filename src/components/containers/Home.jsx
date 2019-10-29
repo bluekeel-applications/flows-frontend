@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ButtonLink from '../shared/ButtonLink';
 import Banner from '../../assets/approvalBanner.png';
-function Home() {
-    return (
-        <div id='home-page-container'>
-            <div id='home-banner-div'>
-                <img id='home-banner' src={Banner} alt='home_banner_img'/>
+import { withStore } from '../../store';
+
+class Home extends Component {
+    componentDidMount = () => {
+        const startOverButton = document.getElementById('startover-button-link');
+        if(startOverButton) {
+            startOverButton.addEventListener('click', () => {
+                this.props.store.removeAll();
+            })
+        }
+    };
+
+    render() {
+        return (
+            <div id='home-page-container'>
+                <div id='home-banner-div'>
+                    <img id='home-banner' src={Banner} alt='home_banner_img'/>
+                </div>
+                <div id='get-started-button-div'>
+                    <ButtonLink 
+                        href='/get_started'
+                        updateOnClick={false}
+                        text='Get Started'
+                    />            
+                </div>
             </div>
-            <div id='get-started-button-div'>
-                <ButtonLink 
-                    href='/get_started'
-                    updateOnClick={false}
-                    text='Get Started'
-                />            
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
-export default Home;
+export default withStore(Home);

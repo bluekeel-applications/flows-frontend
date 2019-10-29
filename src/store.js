@@ -16,6 +16,9 @@ const createStore = WrappedComponent => {
                 const state = this.state
                 delete state[key]
                 this.setState(state)
+            },
+            removeAll: () => {
+                this.setState({});
             }
         };
 

@@ -16,6 +16,7 @@ import HomeLoansContainer from './components/verticals/home_loans/HomeLoansConta
 // Perstonal Loan Components
 import PersonalLoans from './components/verticals/personal_loans/PersonalLoansContainer';
 import DebtTypeController from './components/verticals/personal_loans/DebtTypeController';
+import DebtAmountController from './components/verticals/personal_loans/DebtAmountController';
 
 const routes = {
     "/": () => <Home />,
@@ -33,7 +34,8 @@ const routes = {
     "/home_loans": () => <HomeLoansContainer />,
 // Personal Loan Flow Routes
     "/personal_loans": () => <PersonalLoans />,
-    "/personal/debt_consolidation": () => <DebtTypeController />
+    "/debt_consolidation": () => <DebtTypeController />,
+    "/debt_amount": () => <DebtAmountController />
 };
 
 export default routes;
