@@ -8,12 +8,11 @@ class DebtOptin extends Component {
         return (
             <div className='optin-container'>
                 <div className='question-header'>
-                    <h3 className='optin-header'>
-                        Would you like a loan to consolidate debt?
-                    </h3>
-                    <h3 className='optin-subheader'>
-                        or for any other purpose?
-                    </h3>
+                    <h2 className='optin-header'>
+                        Would you like a loan to consolidate debt,
+                        <br />
+                        or any other purpose?
+                    </h2>
                 </div>
                 <div className='answer-container'>                    
                     <ButtonLink 

@@ -23,14 +23,13 @@ class CheckingOptin extends Component {
 
     render() {
         return (
-        <div className='checking-optin-container'>
+        <div className='optin-container'>
             <div className='question-header'>
-                <h3 className='checking-optin-header'>
-                    Banks are paying $100s to new checking customers. 
-                </h3>
-                <h3 className='checking-optin-subheader'> 
+                <h2 className='optin-header'>
+                    Banks are paying $100s to new checking customers.
+                    <br />
                     Would you like to see free checking account options?
-                </h3>
+                </h2>
             </div>
             <div className='answer-container'>                
                 <ButtonLink 

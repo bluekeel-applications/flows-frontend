@@ -30,8 +30,8 @@ class AutoTypeController extends Component {
     render() {
         return (
             <div className="home-loan-type">
-                <h3>Select Loan Type:</h3>
-                <div>
+                <h2>Select Loan Type:</h2>
+                <div className='answer-container'>
                     {LOAN_TYPES.map((card_type, i) => {
                         return this.cardChoiceButton(card_type, i)
                     })}

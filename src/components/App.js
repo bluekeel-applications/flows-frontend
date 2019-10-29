@@ -3,7 +3,7 @@ import { createStore } from '../store';
 import { useRoutes } from 'hookrouter';
 import routes from '../router'
 
-import ButtonLink from './shared/ButtonLink';
+import { A } from 'hookrouter';
 
 
 const App = () => {
@@ -14,12 +14,9 @@ const App = () => {
     <div className="App">
       {
         isStart ? "" : 
-        <div className='start-over-button'>
-          <ButtonLink 
-            href='/'
-            updateOnClick={false}
-            text='Start Over'
-          />
+        <div className='startover-button'>
+            <A id='startover-button-link' href='/'>Start Over</A>
+            <hr />
         </div>
       }
       {routeResult}

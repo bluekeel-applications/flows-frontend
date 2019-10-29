@@ -12,26 +12,26 @@ class DebtTypeController extends Component {
 
     cardChoiceButton = (typeName, i) => {
         return (
-            <li key={i}>
+            <div key={i}>
                 <ButtonLink 
                     href='/email_optin'
                     updateOnClick={true}
                     storeValue='debt_type'
                     text={typeName}
                 />
-            </li>
+            </div>
         )
     }
 
     render() {
         return (
             <div className="personal-debt-type">
-                Select Primary Debt Type:
-                <ul>
+                <h2>Select Primary Debt Type:</h2>
+                <div className='answer-container'>
                     {DEBT_TYPES.map((card_type, i) => {
                         return this.cardChoiceButton(card_type, i)
                     })}
-                </ul>
+                </div>
             </div>
         );
     }

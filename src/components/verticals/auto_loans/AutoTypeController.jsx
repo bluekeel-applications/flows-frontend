@@ -32,7 +32,7 @@ class AutoTypeController extends Component {
         return (
             <div className="auto-type">
                 <h2>Select Car Type:</h2>
-                <div>
+                <div className='answer-container'>
                     {AUTO_TYPES.map((card_type, i) => {
                         return this.cardChoiceButton(card_type, i)
                     })}                

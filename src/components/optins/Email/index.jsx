@@ -8,12 +8,30 @@ class EmailOptin extends Component {
         this.props.store.set('email', emailInput);
     }
 
+    clearPlaceholder = (e) => {
+        const inputEl = e.target;
+        inputEl.setAttribute('placeholder', '');
+    };
+    
     render() {
         return (
-            <div>
-                <h3>Email Optin</h3>
-                <input id='email-input' placeholder='email address'></input>
-                <button type='submit'><A href='/offer_feed' onClick={this.setTypeOnClick}>Next</A></button>
+            <div className='optin-container'>
+                <div className='question-header'>
+                    <h2 className='optin-header'>
+                        Email Optin
+                    </h2>
+                    <hr />
+                </div>
+                <div className='answer-container'>
+                    <div className='form-input-div'>
+                        <input id='email-input' placeholder='Enter email address' onFocus={this.clearPlaceholder}></input>
+                    </div>
+                    <div className='form-button-div'>
+                        <A href='/offer_feed' onClick={this.setTypeOnClick}>
+                            <button className='link-button' type='submit'>Next</button>
+                        </A>
+                    </div>
+                </div>
             </div>
         )
     }

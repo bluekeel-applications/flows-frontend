@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  border: 3px solid #4472C4;
 }
 
 code {
@@ -14,22 +16,69 @@ code {
 
 .App {
   text-align: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 6px);
   font-weight: 300;
 }
 
 .link-button {
-  width: 15vw;
-  height: 60px;
-  font-size: 1.2rem;
-  margin: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 5px;
   background-color: #4472C4;
-  color: #f5f5f5;
+  color: #fff;
   border-radius: 10px;
 }
 
-.start-over-button {
+.form-input-div {
+  margin: 20px;
+}
+
+#email-input {
+height: 35px;
+width: 50%;
+border: 1px solid rgba(0,0,0,0.5);
+border-radius: 5px;
+font-size: 1.1rem;
+padding-left: 10px;
+}
+
+.offer-key {
+  color: #4472C4;
+  font-weight: 300;
+  margin: 0;
+  transform: translateX(-15%);
+}
+
+.offer-value {
+  line-height: 0;
+}
+
+.offer-data-div {
+  padding-bottom: 0;
+}
+
+.startover-button {
   margin: 2vh 75vw 30px 0;
-  width: 5vw;
+  width: 15vw;
   height: 30px;
+}
+
+#startover-button-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #4472C4
+}
+
+#home-banner {
+  max-width: calc(100vw - 15px);
+}
+
+#home-page-container {
+  min-width: 100vw;
+}
+
+h2 {
+  font-weight: 400;
 }

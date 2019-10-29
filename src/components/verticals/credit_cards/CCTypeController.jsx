@@ -35,8 +35,8 @@ class CCTypeController extends Component {
     render() {
         return (
             <div className="auto-type">
-                <h3>Select Card Type:</h3>
-                <div>
+                <h2>Select Card Type:</h2>
+                <div className='answer-container'>
                     {CC_TYPES.map((card_type, i) => {
                         return this.cardChoiceButton(card_type, i)
                     })}
