@@ -21,7 +21,7 @@ code {
 }
 
 .link-button {
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   font-size: 1.1rem;
   font-weight: 300;
@@ -29,6 +29,11 @@ code {
   background-color: #4472C4;
   color: #fff;
   border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.link-button:hover {
+  cursor: pointer;
 }
 
 .form-input-div {
@@ -36,12 +41,12 @@ code {
 }
 
 #email-input {
-height: 35px;
-width: 50%;
-border: 1px solid rgba(0,0,0,0.5);
-border-radius: 5px;
-font-size: 1.1rem;
-padding-left: 10px;
+  height: 35px;
+  width: 50%;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding-left: 10px;
 }
 
 .offer-key {
@@ -62,7 +67,6 @@ padding-left: 10px;
 .startover-button {
   margin: 2vh 75vw 30px 0;
   width: 15vw;
-  height: 30px;
 }
 
 #startover-button-link {
