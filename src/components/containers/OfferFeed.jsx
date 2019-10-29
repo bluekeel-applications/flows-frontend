@@ -6,7 +6,7 @@ class OfferFeed extends Component {
         let amount = this.props.store.get('debt_amount') || 'Unknown';
         if(amount !== 'Unknown') {
             switch(amount) {
-                case 'Less than $15,000':
+                case 'less_than_$15,000':
                     amount = '<15K';
                     break;
                 default:

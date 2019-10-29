@@ -4,15 +4,6 @@ import Banner from '../../assets/approvalBanner.png';
 import { withStore } from '../../store';
 
 class Home extends Component {
-    componentDidMount = () => {
-        const startOverButton = document.getElementById('startover-button-link');
-        if(startOverButton) {
-            startOverButton.addEventListener('click', () => {
-                this.props.store.removeAll();
-            })
-        }
-    };
-
     render() {
         return (
             <div id='home-page-container'>

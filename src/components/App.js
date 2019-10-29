@@ -1,10 +1,7 @@
 import React from 'react';
 import { createStore } from '../store';
 import { useRoutes } from 'hookrouter';
-import routes from '../router'
-
-import { A } from 'hookrouter';
-
+import routes from '../router';
 
 const App = () => {
   const routeResult = useRoutes(routes);
@@ -15,7 +12,7 @@ const App = () => {
       {
         isStart ? "" : 
         <div className='startover-button'>
-            <A id='startover-button-link' href='/'>Start Over</A>
+            <a id='startover-button-link' href='http://bluekeel-flows-fe.s3-website-us-east-1.amazonaws.com/'>Start Over</a>
             <hr />
         </div>
       }
